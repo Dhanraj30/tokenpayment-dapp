@@ -25,13 +25,13 @@ export default function Events() {
         }
     );
     console.log(events);
-
+    let coinBorderColor = "gray.200";
     return (
-        <Box mt={20} w={"100%"}>
+        <Box mt={20} w={"100%"} >
             <Heading>Recent Transfer:</Heading>
             {!isEventsLoading ? (
                 events?.map((event: any, index) => (
-                    <Card key={index} p={8} my={4}>
+                    <Card key={index} p={8} my={4} backgroundColor={coinBorderColor}>
                         <Flex flexDirection={"row"} alignItems={"center"}>
                             <Text p={2} border={"1px solid grey"} borderRadius={6} fontSize={"xs"}>{truncateAddress(event.data.sender)}</Text>
                             <Text mx={2} fontSize={"sm"}>To</Text>

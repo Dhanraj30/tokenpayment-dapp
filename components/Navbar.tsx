@@ -4,23 +4,24 @@ import Link from "next/link";
 
 export default function Navbar() {
     const address = useAddress();
-
+    const blue = "gray.800";
+    const white = "whitesmoke";
     return (
-        <Container maxW={"1440px"} py={4}>
-            <Flex flexDirection={"row"} justifyContent={"space-between"} alignItems={"center"}>
+        <Container maxW={"1440px"} py={4} borderColor="black" borderRadius="10" >
+            <Flex flexDirection={"row"} justifyContent={"space-between"} alignItems={"center"} >
                 <Link href={"/"}>
-                    <Text fontWeight={"black"}>Transfer App</Text>
+                    <Text fontWeight={"black"}  >Transfer App</Text>
                 </Link>
                 {address && (
-                    <Flex flexDirection={"row"}>
+                    <Flex flexDirection={"row"} >
                         <Link href={"/transfer"}>
-                            <Text mr={8}>Transfer</Text>
+                            <Text mr={8} >Transfer</Text>
                         </Link>
                         <Link href={"/claim"}>
-                            <Text mr={8}>Claim Token</Text>
+                            <Text mr={8} >Claim Token</Text>
                         </Link>
                         <Link href={`/profile/${address}`}>
-                            <Text>My Account</Text>
+                            <Text >My Account</Text>
                         </Link>
                     </Flex>
                 )}

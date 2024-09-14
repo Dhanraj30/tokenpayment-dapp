@@ -8,7 +8,7 @@ type Props = {
 
 export default function FeatureCard({ step, title, description }: Props) {
     return (
-        <Card px={8} py={10}>
+        <Card px={8} py={10} >
           <Stack spacing={8}>
             <Flex flexDirection={"row"} alignItems={"center"}>
                 <Text fontSize={"large"} mr={4}>{step}</Text>
